@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { userStore } from "../../stores";
+    import { Client } from "$lib/client";
+	import { BOT_AUTH_URL } from "$lib/constants"
 	import { onMount } from "svelte";
 
 	const getTokenFromURL = (url: string): string | null => {
@@ -7,26 +8,21 @@
 		return fragment.get("access_token");
 	};
 
-	const fetchUser = async (token: string) => {
-		const response = await fetch("https://discord.com/api/v9/users/@me", {
-			headers: {
-				authorization: `Bearer ${token}`,
-			},
-		});
-
-		return await response.json();
-	};
-
 	onMount(async () => {
-		const token = getTokenFromURL(location.href);
+		let token = getTokenFromURL(location.href) || localStorage.getItem("token")
 
-		if (token == null) return;
+		if (token == null) {
+			location.assign(BOT_AUTH_URL)
+			return
+		}
 
-		userStore.set(await fetchUser(token));
+		window.history.replaceState({}, document.title, "/dashboard");
 
-		userStore.subscribe((value) => {
-			console.log(value)
-		})
+		const client = new Client(token)
+		const user = await client.fetchUser()
+
+		localStorage.setItem("token", client.token)
+
 	});
 </script>
 

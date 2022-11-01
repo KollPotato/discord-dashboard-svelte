@@ -1,17 +1,18 @@
 <script lang="ts">
-    import { userStore } from "../../stores";
-
     let user: any = null;
 
-    userStore.subscribe((value) => {
-        user = value;
-    });
+    const handleLogoClick = () => (location.pathname = "/");
 
     const handleLogoutClick = () => {};
 </script>
 
 <nav class="navbar">
-    <img class="logo" src="/assets/logo.svg" alt="walty logo" />
+    <img
+        on:click={handleLogoClick}
+        class="logo"
+        src="/assets/logo.svg"
+        alt="walty logo"
+    />
     <ul class="nav-items">
         <li class="nav-item">
             <a class="nav-link" href="/dashboard">Dashboard</a>
@@ -20,7 +21,7 @@
             <a class="nav-link" href="/invite">Invite</a>
         </li>
         <li class="nav-item">
-            {#if user == null }
+            {#if user == null}
                 <a class="nav-link" href="/login">Login</a>
             {:else if user.username != undefined}
                 <a class="nav-link" href="/profile"
@@ -39,6 +40,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 16px 24px;
+        .logo {
+            cursor: pointer;
+        }
         & > .nav-items {
             display: flex;
             user-select: none;

@@ -32,6 +32,6 @@
         outline: solid $blue 3px;
         outline-offset: -3px;
         background-color: transparent;
-        color: $blue;
+        color: white;
     }
 </style>

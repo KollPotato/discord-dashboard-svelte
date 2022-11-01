@@ -1,2 +1,0 @@
-export const INVITE_URL = "https://discord.com/api/oauth2/authorize?client_id=979022384155742248&permissions=8&scope=bot"
-export const AUTH_URL = "https://discord.com/api/oauth2/authorize?client_id=979022384155742248&redirect_uri=http%3A%2F%2F127.0.0.1%3A5173%2Fdashboard&response_type=token&scope=identify%20guilds"
