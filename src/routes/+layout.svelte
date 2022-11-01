@@ -1,8 +1,11 @@
 <script>
+	import NavBar from "$lib/components/NavBar.svelte";
 	import "../style.scss";
 </script>
 
 <div class="app">
+	<NavBar />
+	
 	<main>
 		<slot />
 	</main>
@@ -10,7 +13,7 @@
 
 <style>
 	.app {
-		background-color: #2d2d36;
+		background-color: #212227;
 		position: relative;
 		overflow: hidden;
 		width: 100%;

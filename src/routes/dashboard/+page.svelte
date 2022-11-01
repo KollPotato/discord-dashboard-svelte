@@ -1,42 +1,14 @@
 <script lang="ts">
+	import { userStore } from "../../stores";
 	import { onMount } from "svelte";
 
-	const saveTokenInLocalStorage = (token: string) => {
-		localStorage.setItem("token", token);
-	};
-
-	const getTokenFromLocalStorage = (): string | null => {
-		return localStorage.getItem("token");
-	};
-
-	const isTokenInLocalStorage = (): boolean => {
-		return Boolean(getTokenFromLocalStorage());
-	};
-
-	const isTokenValid = async (token: string): Promise<boolean> => {
-		const { username } = await fetchUser(token);
-
-		if (username != undefined) return false;
-		return true;
-	};
-
-	const fetchUser = async (token: string) => {
-		const response = await fetch("https://discord.com/api/users/@me", {
-			headers: {
-				authorization: `Bearer ${token}`,
-			},
-		});
-
-		return await response.json();
-	};
-
-	const getTokenFromUrl = (location: Location): string | null => {
-		const fragment = new URLSearchParams(location.hash.slice(1));
+	const getTokenFromURL = (url: string): string | null => {
+		const fragment = new URLSearchParams(url.slice(1));
 		return fragment.get("access_token");
 	};
 
-	const fetchGuilds = async (token: string) => {
-		const response = await fetch("https://discord.com/api/guilds/@me", {
+	const fetchUser = async (token: string) => {
+		const response = await fetch("https://discord.com/api/v9/users/@me", {
 			headers: {
 				authorization: `Bearer ${token}`,
 			},
@@ -45,24 +17,21 @@
 		return await response.json();
 	};
 
-	const getToken = async (): Promise<string | null> => {
-		if (isTokenInLocalStorage()) return getTokenFromLocalStorage();
-		return getTokenFromUrl(location);
-	};
-
 	onMount(async () => {
-		const token = await getToken();
+		const token = getTokenFromURL(location.href);
 
-		if (token == null || !(await isTokenValid(token))) {
-			location.pathname = "login";
-			return;
-		}
+		if (token == null) return;
 
-		saveTokenInLocalStorage(token);
+		userStore.set(await fetchUser(token));
+
+		userStore.subscribe((value) => {
+			console.log(value)
+		})
 	});
 </script>
 
 <p id="info" />
+
 <svelte:head>
 	<title>Dashboard</title>
 </svelte:head>
