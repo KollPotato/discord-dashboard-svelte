@@ -1,14 +1,37 @@
-<script lang="ts">
-    let user: any = null;
+<script lang="ts" >
+    import { Client, isLoggedIn, logout } from "$lib/client";
+    import { PATH_NAMES } from "$lib/constants";
+    import { onMount } from "svelte";
 
-    const handleLogoClick = () => (location.pathname = "/");
+    const handleLogoClick = () => location.pathname = PATH_NAMES.index
+    const handleLogoutClick = () => location.pathname = PATH_NAMES.logout
 
-    const handleLogoutClick = () => {};
+    let loggedIn = false
+    let client = null
+
+
+    onMount(() => {
+        if (!isLoggedIn(localStorage)) {
+            logout(location)
+            return
+        }
+        
+        
+        loggedIn = true
+
+        const token = localStorage.getItem("token")
+        if (token == null) return
+
+        const client = new Client(token)
+        user = client.fetchUser()
+
+    })
 </script>
 
 <nav class="navbar">
     <img
         on:click={handleLogoClick}
+        on:keypress={handleLogoClick}
         class="logo"
         src="/assets/logo.svg"
         alt="walty logo"
@@ -21,12 +44,10 @@
             <a class="nav-link" href="/invite">Invite</a>
         </li>
         <li class="nav-item">
-            {#if user == null}
+            {#if loggedIn}
                 <a class="nav-link" href="/login">Login</a>
-            {:else if user.username != undefined}
-                <a class="nav-link" href="/profile"
-                    >{user.username}#{user.discriminator}</a
-                >
+            {:else}
+                <a class="nav-link" href="/profile">{user.username}#{user.discriminator}</a>
             {/if}
         </li>
     </ul>

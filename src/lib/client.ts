@@ -1,4 +1,4 @@
-import { BASE_API_URL } from "./constants"
+import { BASE_API_URL, PATH_NAMES } from "./constants"
 
 export interface Guild {
 
@@ -27,9 +27,13 @@ export class AuthorizationError extends Error {
 }
 
 export const isLoggedIn = (storage: Storage): boolean => {
-    let token = storage.getItem("token")
+    const token = storage.getItem("token")
     if (token == null) return false
     return true
+}
+
+export const logout = (location: Location) => {
+    location.pathname = PATH_NAMES.logout
 }
 
 export class Client {
