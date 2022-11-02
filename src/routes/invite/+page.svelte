@@ -1,5 +1,5 @@
 <script>
-    import { BOT_INVITE_URL } from "$lib/client";
+    import { BOT_INVITE_URL } from "$lib/constants";
     import { onMount } from "svelte";
 
     onMount(() => location.assign(BOT_INVITE_URL));

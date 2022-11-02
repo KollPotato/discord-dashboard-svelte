@@ -1,30 +1,35 @@
 <script lang="ts" >
-    import { Client, isLoggedIn, logout } from "$lib/client";
+    import { Client, isLoggedIn, logout, type User } from "$lib/client";
     import { PATH_NAMES } from "$lib/constants";
+    import { DataStorage } from "$lib/data";
     import { onMount } from "svelte";
 
     const handleLogoClick = () => location.pathname = PATH_NAMES.index
-    const handleLogoutClick = () => location.pathname = PATH_NAMES.logout
 
     let loggedIn = false
-    let client = null
+    let activeUser: null | User = null
+    let displayName: string = ""
 
-
-    onMount(() => {
-        if (!isLoggedIn(localStorage)) {
+    onMount(async () => {
+        
+        let dataStorage = DataStorage(localStorage)
+        
+        if (dataStorage.token == null) {
             logout(location)
             return
         }
         
-        
-        loggedIn = true
+        loggedIn = true 
 
-        const token = localStorage.getItem("token")
-        if (token == null) return
+        const client = new Client(dataStorage.token)
 
-        const client = new Client(token)
-        user = client.fetchUser()
+        if (dataStorage.user == null) {
+            const fetchedUser = await client.fetchUser()
+            dataStorage.user = fetchedUser
+        }
 
+        activeUser = dataStorage.user
+        displayName = `${activeUser.username}#${activeUser.discriminator}`
     })
 </script>
 
@@ -44,11 +49,7 @@
             <a class="nav-link" href="/invite">Invite</a>
         </li>
         <li class="nav-item">
-            {#if loggedIn}
-                <a class="nav-link" href="/login">Login</a>
-            {:else}
-                <a class="nav-link" href="/profile">{user.username}#{user.discriminator}</a>
-            {/if}
+            <a class="nav-link" href="{ loggedIn ? "/profile" : "/login" }">{ loggedIn ? displayName : "Login" }</a>
         </li>
     </ul>
 </nav>

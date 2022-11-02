@@ -1,23 +1,22 @@
 import { BASE_API_URL, PATH_NAMES } from "./constants"
+import { DataStorage } from "./data"
 
-export interface Guild {
-
-}
+export interface Guild {}
 
 export interface User {
-    accent_color: number
+    id: string
+    username: string
+    discriminator: string
     avatar: null | string
+    accent_color: number
     avatar_decoration: null | string
     banner: null | string
     banner_color: string
-    discriminator: string
     flags: number
-    id: string
     locale: string
     mfa_enabled: boolean
     premium_type: number
     public_flags: number
-    username: string
 }
 
 export class AuthorizationError extends Error {
@@ -27,7 +26,7 @@ export class AuthorizationError extends Error {
 }
 
 export const isLoggedIn = (storage: Storage): boolean => {
-    const token = storage.getItem("token")
+    const { token } = DataStorage(storage)
     if (token == null) return false
     return true
 }

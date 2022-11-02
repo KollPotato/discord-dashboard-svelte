@@ -9,9 +9,10 @@
 	<main>
 		<slot />
 	</main>
+
 </div>
 
-<style>
+<style lang="scss">
 	.app {
 		background-color: #212227;
 		position: relative;
