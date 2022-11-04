@@ -1,8 +1,9 @@
 <script>
 	import Button from "$lib/components/Button.svelte";
 	import { BOT_AUTH_URL, BOT_INVITE_URL } from "$lib/constants";
-	import { isLoggedIn } from "$lib/client";
+    import { state } from "../store";
 	import { onMount } from "svelte";
+    import { get } from "svelte/store";
 
 	const handleLoginClick = () => location.assign(BOT_AUTH_URL);
 	const handleInviteClick = () => location.assign(BOT_INVITE_URL);
@@ -10,7 +11,7 @@
 
 	let loggedIn = false;
 
-	onMount(() => (loggedIn = isLoggedIn(localStorage)));
+	onMount(() => (loggedIn = get(state).loggedIn));
 </script>
 
 <svelte:head>
@@ -23,16 +24,8 @@
 		<h1 class="title">Walty</h1>
 		<p class="description">Super duper mega ultra Discord bot</p>
 		<div class="buttons">
-			<Button
-				on:click={loggedIn ? handleDashboardClick : handleLoginClick}
-				class="button blue"
-				text={loggedIn ? "Dashboard" : "Invite"}
-			/>
-			<Button
-				on:click={handleInviteClick}
-				class="button blue-invert"
-				text="Invite"
-			/>
+			<Button on:click={loggedIn ? handleDashboardClick : handleLoginClick} class="button blue">{loggedIn ? "Dashboard" : "Login"}</Button>
+			<Button on:click={handleInviteClick} class="button blue-invert">Invite</Button>
 		</div>
 	</div>
 </div>

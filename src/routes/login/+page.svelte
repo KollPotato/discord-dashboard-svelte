@@ -1,10 +1,11 @@
 <script>
     import { BOT_AUTH_URL } from "$lib/constants";
-    import { isLoggedIn } from "$lib/client";
+    import { state } from "../../store";
     import { onMount } from "svelte";
+    import { get } from "svelte/store";
 
     onMount(() => {
-        if (isLoggedIn(localStorage)) {
+        if (get(state).loggedIn) {
             location.pathname = "/dashboard"
             return
         }

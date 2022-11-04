@@ -1,7 +1,13 @@
 import { BASE_API_URL, PATH_NAMES } from "./constants"
-import { DataStorage } from "./data"
 
-export interface Guild {}
+export interface Guild {
+    id: string
+    name: string
+    icon: string
+    features: Array<string>
+    owner: boolean
+    permissions: string
+}
 
 export interface User {
     id: string
@@ -25,29 +31,37 @@ export class AuthorizationError extends Error {
     }
 }
 
-export const isLoggedIn = (storage: Storage): boolean => {
-    const { token } = DataStorage(storage)
-    if (token == null) return false
-    return true
+export class RateLimitingError extends Error {
+    constructor() {
+        super("Could not make an API request to the Discord server, because you are being rate limited")
+    }
 }
 
 export const logout = (location: Location) => {
     location.pathname = PATH_NAMES.logout
 }
 
+export interface ClientState {
+    loggedIn: boolean
+}
+
 export class Client {
     constructor(public readonly token: string) { }
 
     async fetch(url: string): Promise<Response> {
-        const respone = await fetch(url, {
+        const response = await fetch(url, {
             headers: {
                 authorization: `Bearer ${this.token}`
             }
         })
 
-        if (respone.status == 401) throw AuthorizationError
+        const json = await (response.clone()).json()
 
-        return respone
+        if (response.status == 401) throw AuthorizationError
+
+        else if (json.code == 4008) throw RateLimitingError
+
+        return response
     }
 
     async fetchUser(): Promise<User> {
