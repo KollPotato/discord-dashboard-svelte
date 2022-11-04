@@ -26,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/mulish": "^4.5.13",
 		"mongodb": "^4.11.0"
 	}
 }
