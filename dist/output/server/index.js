@@ -1,8 +1,9 @@
 import { c as create_ssr_component, s as setContext, v as validate_component, m as missing_component } from "./chunks/index.js";
 import * as devalue from "devalue";
-import { w as writable, r as readable } from "./chunks/index2.js";
+import { r as readable, w as writable } from "./chunks/index2.js";
 import { parse, serialize } from "cookie";
 import * as set_cookie_parser from "set-cookie-parser";
+import { s as set_private_env } from "./chunks/env-private.js";
 function afterUpdate() {
 }
 function set_prerendering(value) {
@@ -2340,8 +2341,9 @@ class Server {
   }
   async init({ env }) {
     const entries = Object.entries(env);
-    Object.fromEntries(entries.filter(([k]) => !k.startsWith("PUBLIC_")));
+    const prv = Object.fromEntries(entries.filter(([k]) => !k.startsWith("PUBLIC_")));
     const pub = Object.fromEntries(entries.filter(([k]) => k.startsWith("PUBLIC_")));
+    set_private_env(prv);
     this.options.public_env = pub;
     if (!this.options.hooks) {
       const module = await import("./chunks/hooks.server.js");

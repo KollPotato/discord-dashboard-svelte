@@ -31,5 +31,14 @@
 	],
 	"/dashboard/[slug]/events": [
 		"src/routes/+layout.ts"
+	],
+	"/logout": [
+		"src/routes/logout/+page.server.ts",
+		"src/routes/logout/+layout.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/logout/+layout.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
 	]
 }

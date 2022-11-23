@@ -2,12 +2,16 @@
 import { encodeBody } from "$lib/request";
 import type { PageServerLoad } from "./$types";
 import { env } from '$env/dynamic/private'
-import { BOT_AUTH_OPTIONS, CLIENT_ID } from "$lib/constants";
+import { BOT_AUTH_OPTIONS, BOT_AUTH_URL, CLIENT_ID, DASHBOARD_BASE_URL } from "$lib/constants";
+import { redirect } from "@sveltejs/kit";
 
 export const load = async ({ url, fetch, locals }: Parameters<PageServerLoad>[0]) => {
     const code = url.searchParams.get("code")
 
-    if (code == null) return
+    if (code == null && locals.session.data.OAUTH_2 == undefined) {
+        throw redirect(303, BOT_AUTH_URL)
+    }
+    else if (code == null) return
 
     const response = await fetch("https://discord.com/api/oauth2/token", {
         method: "post",
@@ -19,7 +23,7 @@ export const load = async ({ url, fetch, locals }: Parameters<PageServerLoad>[0]
             client_secret: env.CLIENT_SECRET,
             grant_type: "authorization_code",
             code: code,
-            redirect_uri: BOT_AUTH_OPTIONS.redirect_uri,
+            redirect_uri: `${DASHBOARD_BASE_URL}/dashboard`,
             scope: BOT_AUTH_OPTIONS.scope
         }, "x-www-form-urlencoded")
     })

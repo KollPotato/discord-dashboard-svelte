@@ -48,8 +48,6 @@ export class Client {
             }
         })
 
-        const json = await (response.clone()).json()
-
         if (response.status == 401) throw AuthorizationError
         else if (response.status == 429) throw RateLimitingError
 

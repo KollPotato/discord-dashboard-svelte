@@ -15,8 +15,11 @@ export const user = writable(null as User | null, (set) => {
 })
 
 user.subscribe((user: User | null) => {
-    if (user == null) return
     if (!browser) return
+    if (user == null) {
+        localStorage.removeItem("user")
+        return
+    }
     localStorage.setItem("user", JSON.stringify(user))
 })
 
@@ -33,7 +36,10 @@ export const guilds = writable(null as PartialGuild[] | null, (set) => {
 })
 
 guilds.subscribe((guilds: PartialGuild[] | null) => {
-    if (guilds == null) return
     if (!browser) return
+    if (guilds == null) {
+        localStorage.removeItem("guilds")
+        return
+    }
     localStorage.setItem("guilds", JSON.stringify(guilds))
 })

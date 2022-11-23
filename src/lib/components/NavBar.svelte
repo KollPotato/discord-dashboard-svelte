@@ -11,8 +11,6 @@
 
     import { user } from "../../store";
     import { get } from "svelte/store";
-    import { onMount } from "svelte";
-    import type { User } from "$lib/client";
 
     const links = [
         { text: "Dashboard", href: "/dashboard" },
@@ -21,10 +19,14 @@
         { text: "Invite", href: BOT_INVITE_URL },
     ];
 
-    $: cachedUser = get(user)
-    user.subscribe(user => {
-        cachedUser = user
-    })
+    const isActive = (href: string) => {
+        return $page.url.pathname == href;
+    };
+
+    $: cachedUser = get(user);
+    user.subscribe((user) => {
+        cachedUser = user;
+    });
 </script>
 
 <nav
@@ -45,12 +47,18 @@
                 >
             </NavBarItem>
         {/each}
-        <NavBarItem>
-            {#if cachedUser == null}
+
+        {#if cachedUser == null}
+            <NavBarItem>
                 <Link href={BOT_AUTH_URL}>Login</Link>
-            {:else}
-                <p class="select-none">{cachedUser.username}#{cachedUser.discriminator}</p>
-            {/if}
-        </NavBarItem>
+            </NavBarItem>
+        {:else}
+            <p class="select-none">
+                {cachedUser.username}#{cachedUser.discriminator}
+            </p>
+            <NavBarItem>
+                <Link href="/logout">Log out</Link>
+            </NavBarItem>
+        {/if}
     </ul>
 </nav>

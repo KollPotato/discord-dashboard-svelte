@@ -1,10 +1,10 @@
 export const manifest = {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["assets/logo.svg","favicon.png","robots.txt"]),
-	mimeTypes: {".svg":"image/svg+xml",".png":"image/png",".txt":"text/plain"},
+	assets: new Set(["assets/discord.png","assets/logo.svg","favicon.png","robots.txt"]),
+	mimeTypes: {".png":"image/png",".svg":"image/svg+xml",".txt":"text/plain"},
 	_: {
-		entry: {"file":"_app/immutable/start-754ffec4.js","imports":["_app/immutable/start-754ffec4.js","_app/immutable/chunks/index-e8ce05bb.js","_app/immutable/chunks/singletons-adb40031.js"],"stylesheets":[],"fonts":[]},
+		entry: {"file":"_app/immutable/start-ae3733ab.js","imports":["_app/immutable/start-ae3733ab.js","_app/immutable/chunks/index-e8ce05bb.js","_app/immutable/chunks/singletons-7e2e0964.js","_app/immutable/chunks/index-b9bbb9a2.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

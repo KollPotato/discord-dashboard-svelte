@@ -1,13 +1,21 @@
+const DASHBOARD_BASE_URL = "http://localhost:5173";
 const BOT_INVITE_OPTIONS = {
-  client_id: "979022384155742248",
   permissions: "8",
-  scope: "bot"
+  scope: encodeURIComponent("bot")
 };
-const BOT_INVITE_URL = `https://discord.com/api/oauth2/authorize?client_id=${BOT_INVITE_OPTIONS.client_id}&permissions=${BOT_INVITE_OPTIONS.permissions}&scope=${BOT_INVITE_OPTIONS.scope}`;
-const BOT_AUTH_URL = "https://discord.com/api/oauth2/authorize?client_id=979022384155742248&redirect_uri=http%3A%2F%2F127.0.0.1%3A5173%2Fdashboard&response_type=code&scope=identify%20guilds";
+const BOT_AUTH_OPTIONS = {
+  scope: encodeURIComponent("identify guilds"),
+  response_type: "code",
+  redirect_uri: encodeURIComponent(`${DASHBOARD_BASE_URL}/dashboard`)
+};
+const CLIENT_ID = "979022384155742248";
+const BOT_INVITE_URL = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&permissions=${BOT_INVITE_OPTIONS.permissions}&scope=${BOT_INVITE_OPTIONS.scope}`;
+const BOT_AUTH_URL = `https://discord.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${BOT_AUTH_OPTIONS.redirect_uri}&response_type=${BOT_AUTH_OPTIONS.response_type}&scope=${BOT_AUTH_OPTIONS.scope}`;
 const BOT_SUPPORT_SERVER_URL = "https://discord.gg/Nq49k4kY6z";
 export {
-  BOT_SUPPORT_SERVER_URL as B,
-  BOT_INVITE_URL as a,
-  BOT_AUTH_URL as b
+  BOT_AUTH_URL as B,
+  CLIENT_ID as C,
+  BOT_SUPPORT_SERVER_URL as a,
+  BOT_INVITE_URL as b,
+  BOT_AUTH_OPTIONS as c
 };

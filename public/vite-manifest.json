@@ -1,107 +1,51 @@
 {
-  "node_modules/@fontsource/poppins/files/poppins-latin-ext-200-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-latin-ext-200-normal-f5bed652.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-latin-ext-200-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-devanagari-300-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-devanagari-300-normal-d531423e.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-devanagari-300-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-latin-200-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-latin-200-normal-6f0c5725.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-latin-200-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-latin-ext-300-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-latin-ext-300-normal-32282e10.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-latin-ext-300-normal.woff2"
-  },
   "node_modules/@fontsource/poppins/files/poppins-latin-ext-400-normal.woff2": {
     "file": "_app/immutable/assets/poppins-latin-ext-400-normal-cb8bdeab.woff2",
     "src": "node_modules/@fontsource/poppins/files/poppins-latin-ext-400-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-latin-300-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-latin-300-normal-78bc3aa7.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-latin-300-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-devanagari-400-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-devanagari-400-normal-478b3ab7.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-devanagari-400-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-devanagari-200-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-devanagari-200-normal-1407f197.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-devanagari-200-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-devanagari-500-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-devanagari-500-normal-721c714f.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-devanagari-500-normal.woff2"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-200-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-cyrillic-ext-200-normal-30670a00.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-200-normal.woff2"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2": {
-    "file": "_app/immutable/assets/poppins-latin-400-normal-7d93459d.woff2",
-    "src": "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2"
   },
   "node_modules/@fontsource/poppins/files/poppins-latin-ext-500-normal.woff2": {
     "file": "_app/immutable/assets/poppins-latin-ext-500-normal-5f9d6298.woff2",
     "src": "node_modules/@fontsource/poppins/files/poppins-latin-ext-500-normal.woff2"
   },
-  "node_modules/@fontsource/mulish/files/mulish-cyrillic-200-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-cyrillic-200-normal-09037092.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-200-normal.woff2"
+  "node_modules/@fontsource/poppins/files/poppins-devanagari-400-normal.woff2": {
+    "file": "_app/immutable/assets/poppins-devanagari-400-normal-478b3ab7.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-devanagari-400-normal.woff2"
   },
-  "node_modules/@fontsource/mulish/files/mulish-latin-ext-200-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-latin-ext-200-normal-88916cf3.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-latin-ext-200-normal.woff2"
+  "node_modules/@fontsource/poppins/files/poppins-devanagari-500-normal.woff2": {
+    "file": "_app/immutable/assets/poppins-devanagari-500-normal-721c714f.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-devanagari-500-normal.woff2"
+  },
+  "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2": {
+    "file": "_app/immutable/assets/poppins-latin-400-normal-7d93459d.woff2",
+    "src": "node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2"
   },
   "node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2": {
     "file": "_app/immutable/assets/poppins-latin-500-normal-cd36de20.woff2",
     "src": "node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2"
   },
-  "node_modules/@fontsource/mulish/files/mulish-cyrillic-300-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-cyrillic-300-normal-779f3713.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-300-normal.woff2"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-300-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-cyrillic-ext-300-normal-fb45a838.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-300-normal.woff2"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-latin-200-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-latin-200-normal-9b32befb.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-latin-200-normal.woff2"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-latin-ext-300-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-latin-ext-300-normal-e3757d5c.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-latin-ext-300-normal.woff2"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-latin-300-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-latin-300-normal-48a1c535.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-latin-300-normal.woff2"
+  "node_modules/@fontsource/mulish/files/mulish-cyrillic-400-normal.woff2": {
+    "file": "_app/immutable/assets/mulish-cyrillic-400-normal-75e6e1cf.woff2",
+    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-400-normal.woff2"
   },
   "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-400-normal.woff2": {
     "file": "_app/immutable/assets/mulish-cyrillic-ext-400-normal-8e931018.woff2",
     "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-400-normal.woff2"
   },
-  "node_modules/@fontsource/mulish/files/mulish-cyrillic-400-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-cyrillic-400-normal-75e6e1cf.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-400-normal.woff2"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-latin-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-latin-ext-400-normal-fddf105a.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-latin-ext-400-normal.woff2"
+  "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-500-normal.woff2": {
+    "file": "_app/immutable/assets/mulish-cyrillic-ext-500-normal-4086af25.woff2",
+    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-500-normal.woff2"
   },
   "node_modules/@fontsource/mulish/files/mulish-latin-400-normal.woff2": {
     "file": "_app/immutable/assets/mulish-latin-400-normal-ad234f09.woff2",
     "src": "node_modules/@fontsource/mulish/files/mulish-latin-400-normal.woff2"
   },
-  "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-500-normal.woff2": {
-    "file": "_app/immutable/assets/mulish-cyrillic-ext-500-normal-4086af25.woff2",
-    "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-ext-500-normal.woff2"
-  },
   "node_modules/@fontsource/mulish/files/mulish-cyrillic-500-normal.woff2": {
     "file": "_app/immutable/assets/mulish-cyrillic-500-normal-6d1c98af.woff2",
     "src": "node_modules/@fontsource/mulish/files/mulish-cyrillic-500-normal.woff2"
+  },
+  "node_modules/@fontsource/mulish/files/mulish-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/mulish-latin-ext-400-normal-fddf105a.woff2",
+    "src": "node_modules/@fontsource/mulish/files/mulish-latin-ext-400-normal.woff2"
   },
   "node_modules/@fontsource/mulish/files/mulish-latin-ext-500-normal.woff2": {
     "file": "_app/immutable/assets/mulish-latin-ext-500-normal-eeb5b038.woff2",
@@ -111,14 +55,6 @@
     "file": "_app/immutable/assets/mulish-latin-500-normal-faf6e6e3.woff2",
     "src": "node_modules/@fontsource/mulish/files/mulish-latin-500-normal.woff2"
   },
-  "node_modules/@fontsource/poppins/files/poppins-all-200-normal.woff": {
-    "file": "_app/immutable/assets/poppins-all-200-normal-82f02be1.woff",
-    "src": "node_modules/@fontsource/poppins/files/poppins-all-200-normal.woff"
-  },
-  "node_modules/@fontsource/poppins/files/poppins-all-300-normal.woff": {
-    "file": "_app/immutable/assets/poppins-all-300-normal-df046399.woff",
-    "src": "node_modules/@fontsource/poppins/files/poppins-all-300-normal.woff"
-  },
   "node_modules/@fontsource/poppins/files/poppins-all-400-normal.woff": {
     "file": "_app/immutable/assets/poppins-all-400-normal-c68e1edb.woff",
     "src": "node_modules/@fontsource/poppins/files/poppins-all-400-normal.woff"
@@ -126,14 +62,6 @@
   "node_modules/@fontsource/poppins/files/poppins-all-500-normal.woff": {
     "file": "_app/immutable/assets/poppins-all-500-normal-9ec8c55c.woff",
     "src": "node_modules/@fontsource/poppins/files/poppins-all-500-normal.woff"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-all-200-normal.woff": {
-    "file": "_app/immutable/assets/mulish-all-200-normal-4900379a.woff",
-    "src": "node_modules/@fontsource/mulish/files/mulish-all-200-normal.woff"
-  },
-  "node_modules/@fontsource/mulish/files/mulish-all-300-normal.woff": {
-    "file": "_app/immutable/assets/mulish-all-300-normal-80e5ad66.woff",
-    "src": "node_modules/@fontsource/mulish/files/mulish-all-300-normal.woff"
   },
   "node_modules/@fontsource/mulish/files/mulish-all-400-normal.woff": {
     "file": "_app/immutable/assets/mulish-all-400-normal-c5d78505.woff",
@@ -144,12 +72,12 @@
     "src": "node_modules/@fontsource/mulish/files/mulish-all-500-normal.woff"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-754ffec4.js",
+    "file": "_app/immutable/start-ae3733ab.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-e8ce05bb.js",
-      "_singletons-adb40031.js"
+      "_singletons-7e2e0964.js"
     ],
     "dynamicImports": [
       "dist/generated/nodes/0.js",
@@ -161,27 +89,18 @@
     ]
   },
   "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-8624f0f6.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-e7da5aa1.js",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index-e8ce05bb.js",
-      "_stores-6784f045.js",
-      "_constants-e4742d4d.js",
-      "_singletons-adb40031.js"
+      "_stores-aa7a9cac.js",
+      "_store-c4ebe61c.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-4e8f805b.css"
+      "_app/immutable/assets/_layout-47290781.css"
     ],
     "assets": [
-      "_app/immutable/assets/poppins-devanagari-200-normal-1407f197.woff2",
-      "_app/immutable/assets/poppins-all-200-normal-82f02be1.woff",
-      "_app/immutable/assets/poppins-latin-ext-200-normal-f5bed652.woff2",
-      "_app/immutable/assets/poppins-latin-200-normal-6f0c5725.woff2",
-      "_app/immutable/assets/poppins-devanagari-300-normal-d531423e.woff2",
-      "_app/immutable/assets/poppins-all-300-normal-df046399.woff",
-      "_app/immutable/assets/poppins-latin-ext-300-normal-32282e10.woff2",
-      "_app/immutable/assets/poppins-latin-300-normal-78bc3aa7.woff2",
       "_app/immutable/assets/poppins-devanagari-400-normal-478b3ab7.woff2",
       "_app/immutable/assets/poppins-all-400-normal-c68e1edb.woff",
       "_app/immutable/assets/poppins-latin-ext-400-normal-cb8bdeab.woff2",
@@ -190,16 +109,6 @@
       "_app/immutable/assets/poppins-all-500-normal-9ec8c55c.woff",
       "_app/immutable/assets/poppins-latin-ext-500-normal-5f9d6298.woff2",
       "_app/immutable/assets/poppins-latin-500-normal-cd36de20.woff2",
-      "_app/immutable/assets/mulish-cyrillic-ext-200-normal-30670a00.woff2",
-      "_app/immutable/assets/mulish-all-200-normal-4900379a.woff",
-      "_app/immutable/assets/mulish-cyrillic-200-normal-09037092.woff2",
-      "_app/immutable/assets/mulish-latin-ext-200-normal-88916cf3.woff2",
-      "_app/immutable/assets/mulish-latin-200-normal-9b32befb.woff2",
-      "_app/immutable/assets/mulish-cyrillic-ext-300-normal-fb45a838.woff2",
-      "_app/immutable/assets/mulish-all-300-normal-80e5ad66.woff",
-      "_app/immutable/assets/mulish-cyrillic-300-normal-779f3713.woff2",
-      "_app/immutable/assets/mulish-latin-ext-300-normal-e3757d5c.woff2",
-      "_app/immutable/assets/mulish-latin-300-normal-48a1c535.woff2",
       "_app/immutable/assets/mulish-cyrillic-ext-400-normal-8e931018.woff2",
       "_app/immutable/assets/mulish-all-400-normal-c5d78505.woff",
       "_app/immutable/assets/mulish-cyrillic-400-normal-75e6e1cf.woff2",
@@ -213,12 +122,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-0c12c0cc.js",
+    "file": "_app/immutable/components/error.svelte-88556306.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-e8ce05bb.js",
-      "_stores-6784f045.js"
+      "_stores-aa7a9cac.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
@@ -230,21 +139,25 @@
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-d381288e.js",
+    "file": "_app/immutable/components/pages/_page.svelte-04e88cc7.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-e8ce05bb.js",
-      "_constants-e4742d4d.js"
+      "_store-c4ebe61c.js"
     ]
   },
   "src/routes/dashboard/+page.svelte": {
-    "file": "_app/immutable/components/pages/dashboard/_page.svelte-76e58f29.js",
+    "file": "_app/immutable/components/pages/dashboard/_page.svelte-9e9b9f0f.js",
     "src": "src/routes/dashboard/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-e8ce05bb.js",
-      "_stores-6784f045.js"
+      "_stores-aa7a9cac.js",
+      "_store-c4ebe61c.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-b6f71929.css"
     ]
   },
   "src/routes/docs/+page.svelte": {
@@ -271,24 +184,33 @@
       "__layout-015c17a2.js"
     ]
   },
-  "_singletons-adb40031.js": {
-    "file": "_app/immutable/chunks/singletons-adb40031.js",
+  "_singletons-7e2e0964.js": {
+    "file": "_app/immutable/chunks/singletons-7e2e0964.js",
     "imports": [
-      "_index-e8ce05bb.js"
+      "_index-b9bbb9a2.js"
     ]
   },
   "_index-e8ce05bb.js": {
     "file": "_app/immutable/chunks/index-e8ce05bb.js"
   },
-  "_stores-6784f045.js": {
-    "file": "_app/immutable/chunks/stores-6784f045.js",
+  "_index-b9bbb9a2.js": {
+    "file": "_app/immutable/chunks/index-b9bbb9a2.js",
     "imports": [
-      "_index-e8ce05bb.js",
-      "_singletons-adb40031.js"
+      "_index-e8ce05bb.js"
     ]
   },
-  "_constants-e4742d4d.js": {
-    "file": "_app/immutable/chunks/constants-e4742d4d.js"
+  "_stores-aa7a9cac.js": {
+    "file": "_app/immutable/chunks/stores-aa7a9cac.js",
+    "imports": [
+      "_index-e8ce05bb.js",
+      "_singletons-7e2e0964.js"
+    ]
+  },
+  "_store-c4ebe61c.js": {
+    "file": "_app/immutable/chunks/store-c4ebe61c.js",
+    "imports": [
+      "_index-b9bbb9a2.js"
+    ]
   },
   "__layout-1daba58d.js": {
     "file": "_app/immutable/chunks/_layout-1daba58d.js"
@@ -297,7 +219,7 @@
     "file": "_app/immutable/chunks/_layout-015c17a2.js"
   },
   "dist/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-e6791100.js",
+    "file": "_app/immutable/chunks/0-3ab6d40b.js",
     "src": "dist/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -306,7 +228,7 @@
     ]
   },
   "dist/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-66241528.js",
+    "file": "_app/immutable/chunks/1-c1fb8106.js",
     "src": "dist/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -323,7 +245,7 @@
     ]
   },
   "dist/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-aece1700.js",
+    "file": "_app/immutable/chunks/3-b7bc34e0.js",
     "src": "dist/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -331,7 +253,7 @@
     ]
   },
   "dist/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-cdd2d360.js",
+    "file": "_app/immutable/chunks/4-3d00e46f.js",
     "src": "dist/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
@@ -347,7 +269,11 @@
     ]
   },
   "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-4e8f805b.css",
+    "file": "_app/immutable/assets/_layout-47290781.css",
     "src": "src/routes/+layout.css"
+  },
+  "src/routes/dashboard/+page.css": {
+    "file": "_app/immutable/assets/_page-b6f71929.css",
+    "src": "src/routes/dashboard/+page.css"
   }
 }

@@ -1,3 +1,5 @@
+import { e as env } from "../../../chunks/env-private.js";
+import { C as CLIENT_ID, c as BOT_AUTH_OPTIONS } from "../../../chunks/constants.js";
 const encodeBody = (body, type) => {
   const encodeBodyMap = {
     "json": (body2) => {
@@ -19,12 +21,12 @@ const load = async ({ url, fetch, locals }) => {
       "Content-type": "application/x-www-form-urlencoded"
     },
     body: encodeBody({
-      client_id: "979022384155742248",
-      client_secret: "b4sfcsvEhmyNgK8DMt5zple_UpAcfOmK",
+      client_id: CLIENT_ID,
+      client_secret: env.CLIENT_SECRET,
       grant_type: "authorization_code",
       code,
-      redirect_uri: "http://127.0.0.1:5173/dashboard",
-      scope: "identify%20guilds"
+      redirect_uri: BOT_AUTH_OPTIONS.redirect_uri,
+      scope: BOT_AUTH_OPTIONS.scope
     }, "x-www-form-urlencoded")
   });
   const json = await response.clone().json();
