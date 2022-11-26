@@ -8,12 +8,9 @@ export const load: PageServerLoad = async ({ url, fetch, locals }) => {
     const code = url.searchParams.get("code")
 
     if (code == null && locals.session.data.OAUTH_2 == undefined) {
-        console.log("Log: code is null and session is empty, redirecting")
         throw redirect(303, BOT_AUTH_URL)
     }
     else if (code == null) return
-
-    console.log("Log: code is in search parameters, granting access token")
 
     const response = await fetch("https://discord.com/api/oauth2/token", {
         method: "post",
@@ -31,12 +28,8 @@ export const load: PageServerLoad = async ({ url, fetch, locals }) => {
     })
 
     const json = await response.clone().json()
-    console.log(json)
-
 
     if (json.error !== undefined) return
-
-    console.log("Log: acccess token granted, saving in session cookie")
 
     await locals.session.set({ OAUTH_2: json })
     throw redirect(308, `${DASHBOARD_BASE_URL}/dashboard`)
