@@ -1,1 +1,0 @@
-import{S as n,i as r,s as p,I as l,o as u}from"../../../../chunks/index-e8ce05bb.js";import{p as i}from"../../../../chunks/stores-cff3d914.js";function c(s,o,t){let e;return l(s,i,a=>t(0,e=a)),u(()=>{console.log(e.params.slug)}),[]}class g extends n{constructor(o){super(),r(this,o,c,null,p,{})}}export{g as default};
