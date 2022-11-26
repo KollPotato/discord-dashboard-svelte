@@ -29,9 +29,13 @@
 	"dependencies": {
 		"@fontsource/mulish": "^4.5.13",
 		"@fontsource/poppins": "^4.5.10",
+		"@joner/discord-bitfield-calculator": "^1.0.3",
 		"@svelte-plugins/tooltips": "^0.1.6",
 		"@sveltejs/adapter-static": "^1.0.0-next.48",
+		"@types/dom-inputevent": "^1.0.7",
+		"discord.js": "^14.6.0",
 		"gsap": "^3.11.3",
+		"react": "^18.2.0",
 		"sass": "^1.56.1",
 		"svelte-kit-cookie-session": "^3.2.2",
 		"svelte-tooltip": "^1.2.0",

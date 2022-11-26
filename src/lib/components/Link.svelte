@@ -2,18 +2,19 @@
     export let href: string;
     export let underline: boolean = false;
     export let active: boolean = false;
+    export let pointer: boolean = false
 </script>
 
 <a
-    class="link transition-colors {underline ? 'wow-underline' : '' } {active
-        ? 'text-primary-400'
+    class="link transition-colors {pointer ? 'cursor-pointer' : 'cursor-default'} {underline ? 'wow-underline' : '' } {active
+        ? 'text-primary-400 active'
         : ''} h-fit"
     {href}
 >
     <slot />
 </a>
 
-<style>
+<style lang="scss">
     .link {
         display: inline-block;
         position: relative;
@@ -32,8 +33,8 @@
         transition: transform 0.25s ease-out;
     }
 
-    .link.wow-underline.text-primary-400:after {
-        background-color: rgb(125 130 255);
+    .link.wow-underline.active:after {
+        @apply bg-primary-500;
     }
 
     .link.wow-underline:hover:after {

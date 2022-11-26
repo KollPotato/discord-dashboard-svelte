@@ -16,12 +16,13 @@
 	<meta name="description" content="Walty" />
 </svelte:head>
 
+
 <div class="grid text-white relative top-[70%] place-items-center w-full">
 	<div class="flex flex-col gap-6 items-center">
 		<h1 id="title" class="text-5xl">
 			Hey, I am <span id="name" class="text-primary-400">Walty</span>
 		</h1>
-		<p id="description" class="w-fit">{EN_US.bot.description}</p>
+		<p id="description" class="w-fit">{EN_US.index.description}</p>
 		<div class="flex w-full flex-col gap-2">
 			{#if cachedUser != null}
 				<Button href="/dashboard">Dashboard</Button>

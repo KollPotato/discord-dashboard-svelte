@@ -10,7 +10,6 @@
 	</main>
 </div>
 
-
 <style>
 	.body {
 		display: flex;

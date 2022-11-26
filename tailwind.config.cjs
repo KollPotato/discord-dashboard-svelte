@@ -1,34 +1,31 @@
+const colors = require("tailwindcss/colors")
+
 /** @type {import("tailwindcss").Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,js,svelte,ts}"
-  ],
-  
-  theme: {
-      extend: {},
-      outlineWidth: {
-        "3": "3px"
-      },
-      colors: {
-          black: "#1e1e1e",
-          white: "#ffffff",
-          primary: {
-              "50": "#f6f6ff",
-              "100": "#ecedff",
-              "200": "#d1d3ff",
-              "300": "#b5b8ff",
-              "400": "#7d82ff",
-              "500": "#454dff",
-              "600": "#3e45e6",
-              "700": "#343abf",
-              "800": "#292e99",
-              "900": "#22267d"
-          }
-      },
-      fontFamily: {
-          sans: ["Mulish"],
-          display: ["Mulish"],
-          body: ["Mulish"]
-      }
-  }
+    content: [
+        "./src/**/*.{html,js,svelte,ts}"
+    ],
+
+    theme: {
+        extend: {
+            outlineWidth: {
+                "1": "1px",
+                "2": "2px",
+                "3": "3px",
+                "4": "4px",
+                "5": "5px",
+                "6": "6px",
+                "7": "7px",
+                "8": "8px",
+            },
+            colors: {
+                primary: colors.indigo
+            }
+        },
+        fontFamily: {
+            sans: ["Mulish"],
+            display: ["Mulish"],
+            body: ["Mulish"]
+        }
+    }
 }

@@ -1,11 +1,17 @@
 export interface Language {
-    bot: {
+    index: {
         description: string
+    }
+    dashboard: {
+        select: string
     }
 }
 
 export const EN_US: Language = {
-    bot: {
+    index: {
         description: "Super duper mega ultra cool Discord bot"
+    },
+    dashboard: {
+        select: "Select a guild to continue"
     }
 }

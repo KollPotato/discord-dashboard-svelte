@@ -28,6 +28,7 @@
 declare module '$env/static/private' {
 	export const CLIENT_SECRET: string;
 	export const CLIENT_ID: string;
+	export const CLIENT_TOKEN: string;
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const ChocolateyInstall: string;
@@ -62,6 +63,7 @@ declare module '$env/static/private' {
 	export const NEKO_INSTPATH: string;
 	export const NODE: string;
 	export const NODEJS_ORG_MIRROR: string;
+	export const NODE_ENV: string;
 	export const NODE_EXE: string;
 	export const NODIST_IOJS_MIRROR: string;
 	export const NODIST_NODE_MIRROR: string;
@@ -157,6 +159,7 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		CLIENT_SECRET: string;
 		CLIENT_ID: string;
+		CLIENT_TOKEN: string;
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		ChocolateyInstall: string;
@@ -191,6 +194,7 @@ declare module '$env/dynamic/private' {
 		NEKO_INSTPATH: string;
 		NODE: string;
 		NODEJS_ORG_MIRROR: string;
+		NODE_ENV: string;
 		NODE_EXE: string;
 		NODIST_IOJS_MIRROR: string;
 		NODIST_NODE_MIRROR: string;

@@ -32,13 +32,14 @@
 <nav
     class="z-10 flex w-screen text-white flex-row justify-between h-fit items-center p-6 pt-5"
 >
-    <Link href="/">
+    <Link pointer href="/">
         <img class="w-24" src="/assets/logo.svg" alt="walty logo" />
     </Link>
     <ul class="flex flex-row gap-4 h-fit">
         {#each links as link}
             <NavBarItem>
                 <Link
+                    pointer
                     underline
                     active={$page.url.pathname == link.href}
                     href={link.href}
@@ -50,14 +51,14 @@
 
         {#if cachedUser == null}
             <NavBarItem>
-                <Link href={BOT_AUTH_URL}>Login</Link>
+                <Link pointer underline href={BOT_AUTH_URL}>Login</Link>
             </NavBarItem>
         {:else}
             <p class="select-none">
                 {cachedUser.username}#{cachedUser.discriminator}
             </p>
             <NavBarItem>
-                <Link href="/logout">Log out</Link>
+                <Link pointer underline href="/logout">Log out</Link>
             </NavBarItem>
         {/if}
     </ul>

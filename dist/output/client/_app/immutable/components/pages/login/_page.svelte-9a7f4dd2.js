@@ -1,0 +1,1 @@
+import{S as t,i as n,s}from"../../../chunks/index-e8ce05bb.js";function a(r,e,o){return[!1]}class l extends t{constructor(e){super(),n(this,e,a,null,s,{prerender:0})}get prerender(){return this.$$.ctx[0]}}export{l as default};

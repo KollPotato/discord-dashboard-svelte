@@ -1,5 +1,5 @@
 import { guilds, user } from "../store"
-import { BASE_API_URL } from "./constants"
+import { DISCORD_BASE_API_URL, DISCORD_BASE_URL } from "./constants"
 
 export interface PartialGuild {
     id: string
@@ -55,13 +55,13 @@ export class Client {
     }
 
     async fetchUser(): Promise<User> {
-        const response = await this.fetch(`${BASE_API_URL}/users/@me`)
+        const response = await this.fetch(`${DISCORD_BASE_API_URL}/users/@me`)
 
         return response.json()
     }
 
     async fetchGuilds(): Promise<PartialGuild[]> {
-        const response = await this.fetch(`${BASE_API_URL}/users/@me/guilds`)
+        const response = await this.fetch(`${DISCORD_BASE_API_URL}/users/@me/guilds`)
 
         return response.json()
     }

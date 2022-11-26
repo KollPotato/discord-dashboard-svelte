@@ -1,26 +1,22 @@
 <script lang="ts">
     export let invert: boolean = false;
     export let href: string | null = null;
+
+    const invertStyle =
+        "outline-primary-600 outline-3 -outline-offset-2 outline-none";
+    const sharedStyle =
+        "select-none rounded-md p-4 text-center transition-colors";
+    const style = invert
+        ? `${sharedStyle} ${invertStyle} hover:outline-primary-700`
+        : `${sharedStyle} bg-primary-600 hover:bg-primary-700`;
 </script>
 
 {#if href == null}
-    <button
-        {...$$restProps}
-        on:click
-        class="{invert
-            ? 'outline-primary-500 outline-3 -outline-offset-2 outline-none'
-            : 'bg-primary-500'} rounded-md p-4 select-none"
-    >
+    <button {...$$restProps} on:click class={style}>
         <slot />
     </button>
 {:else}
-    <a
-        {...$$restProps}
-        href="{href}"
-        class="{invert
-            ? 'outline-primary-500 outline-3 -outline-offset-2 outline-none hover:outline-primary-600'
-            : 'bg-primary-500 hover:bg-primary-600'} transition-colors rounded-md p-4 text-center"
-    >
+    <a {...$$restProps} {href} class={style}>
         <slot />
     </a>
 {/if}

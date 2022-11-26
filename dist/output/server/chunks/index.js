@@ -225,13 +225,13 @@ function style_object_to_string(style_object) {
 }
 export {
   safe_not_equal as a,
-  add_attribute as b,
+  subscribe as b,
   create_ssr_component as c,
-  subscribe as d,
-  escape as e,
-  each as f,
+  escape as d,
+  each as e,
+  getContext as f,
   get_store_value as g,
-  getContext as h,
+  add_attribute as h,
   compute_rest_props as i,
   spread as j,
   escape_object as k,

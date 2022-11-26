@@ -4,6 +4,7 @@
         "package-lock.json": true,
         ".vscode": true,
         ".npmrc": true,
-        "dist": true
+        "dist": true,
+        "public": true
     }
 }

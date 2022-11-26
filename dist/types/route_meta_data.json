@@ -6,7 +6,6 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/dashboard": [
-		"src/routes/dashboard/+page.server.ts",
 		"src/routes/dashboard/+layout.ts",
 		"src/routes/+layout.ts",
 		"src/routes/+layout.server.ts",
@@ -19,9 +18,6 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/dashboard/[slug]": [
-		"src/routes/dashboard/+layout.ts",
-		"src/routes/+layout.ts",
-		"src/routes/+layout.server.ts",
 		"src/routes/dashboard/+layout.ts",
 		"src/routes/+layout.ts",
 		"src/routes/+layout.server.ts"
@@ -38,6 +34,15 @@
 		"src/routes/+layout.ts",
 		"src/routes/+layout.server.ts",
 		"src/routes/logout/+layout.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/login": [
+		"src/routes/login/+page.server.ts",
+		"src/routes/login/+layout.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/login/+layout.ts",
 		"src/routes/+layout.ts",
 		"src/routes/+layout.server.ts"
 	]
